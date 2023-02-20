@@ -5,21 +5,19 @@ const barHeight = StatusBar.currentHeight;
 
 const SafeView = styled.SafeAreaView`
   flex: 1;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
   ${barHeight && `margin-top:${barHeight}px;`}
-  background-color: "#f2f2f2";
+  background-color: ${({ theme }) => theme.colors.bg.primary};
 `;
 
 const SearchContainer = styled.View`
-  padding: 16px;
+  padding: ${({ theme }) => theme.space[3]};
   width: 100%;
 `;
 
 const MainContainer = styled.View`
   flex: 1;
-  width: 100%;
-  padding: 16px;
+  padding: ${({ theme }) => theme.space[3]};
 `;
 
 export { SafeView, SearchContainer, MainContainer };
