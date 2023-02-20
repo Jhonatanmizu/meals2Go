@@ -1,13 +1,14 @@
-import * as React from "react";
-import { Searchbar } from "react-native-paper";
+import { useState } from "react";
+import * as S from "./styles";
 
 const SearchInput = () => {
-  const [searchQuery, setSearchQuery] = React.useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const onChangeSearch = (query) => setSearchQuery(query);
 
   return (
-    <Searchbar
+    <S.Search
+      elevation={5}
       placeholder="Busque aqui..."
       onChangeText={onChangeSearch}
       value={searchQuery}
